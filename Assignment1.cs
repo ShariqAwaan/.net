@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     public class Assignment1
     {
-        public int MultiplicationOfTwoNumbers()
+        public void MultiplicationOfTwoNumbers()
         {
 
             Console.WriteLine("Enter First No.");
@@ -19,30 +19,28 @@ namespace ConsoleApp1
             int product = num1 * num2;
 
             Console.WriteLine("The answer is " + product);
-            return product;
 
 
 
         }
 
-        public string AddingPY()
+        public void AddingPY()
         {
             Console.WriteLine("Add your Keyword");
             string keyword = Console.ReadLine();
             if (keyword.StartsWith("PY") || keyword.StartsWith("py"))
             {
-                return keyword;
+                 Console.WriteLine(keyword);
             }
             else
             {
                 string newWord = "Py" + keyword;
                 Console.WriteLine("The new keyword is " + newWord);
-                return newWord;
             }
 
         }
 
-        public string ChangingFirstAndLastPositions()
+        public void ChangingFirstAndLastPositions()
         {
             Console.WriteLine("Enter your Character ");
             string keyword = Console.ReadLine();
@@ -50,26 +48,23 @@ namespace ConsoleApp1
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 2)
             {
                 Console.WriteLine("The input is too short or empty.");
-                return keyword;
             }
 
             string newWord = keyword[keyword.Length - 1]
                 + keyword.Substring(1, keyword.Length - 2)
                 + keyword[0];
             Console.WriteLine("The new keyword is " + newWord);
-            return newWord;
         }
 
-        public int SquareOfNumber()
+        public void SquareOfNumber()
         {
             Console.WriteLine("Enter your no. ");
             int number = Convert.ToInt32(Console.ReadLine());
             int Square = Convert.ToInt32(Math.Pow(number, 2));
             Console.WriteLine(Square);
-            return Square;
         }
 
-        public string ChangingSpecificKeyword()
+        public void ChangingSpecificKeyword()
         {
             Console.WriteLine("Enter your Keyword");
             string keyword = Console.ReadLine();
@@ -77,7 +72,6 @@ namespace ConsoleApp1
             if (string.IsNullOrEmpty(keyword) || keyword.Length < 2)
             {
                 Console.WriteLine("The input is too short or empty.");
-                return keyword;
             }
 
             Console.WriteLine("Enter character to be removed");
@@ -86,19 +80,17 @@ namespace ConsoleApp1
             if (string.IsNullOrEmpty(givenWord) || givenWord.Length > 1)
             {
                 Console.WriteLine("The input is too long or empty.");
-                return keyword;
             }
 
             //string indexOfGivenWord = keyword[givenWord];
             string newKeyword = keyword.Replace(givenWord, "");
 
             Console.WriteLine("The new keyword is " + newKeyword);
-            return newKeyword;
 
 
         }
 
-        public int MultipleOf3or7()
+        public void MultipleOf3or7()
         {
             Console.WriteLine("Enter your number :");
             int givenNumber = Convert.ToInt32(Console.ReadLine());
@@ -122,11 +114,10 @@ namespace ConsoleApp1
                 Console.WriteLine("Given no. is niether multiple of 3 nor 7");
 
             }
-            return givenNumber;
 
         }
 
-        public int FindingLargestValue()
+        public void FindingLargestValue()
         {
             Console.WriteLine("Enter First Number");
             int firstNumber = Convert.ToInt32(Console.ReadLine());
@@ -140,28 +131,24 @@ namespace ConsoleApp1
             if (firstNumber == secondNumber && firstNumber == thirdNumber)
             {
                 Console.WriteLine("All values are equal ");
-                return firstNumber;
             }
             else if (firstNumber > secondNumber && firstNumber > thirdNumber)
             {
                 Console.WriteLine("The First no. is the Largest ");
-                return firstNumber;
             }
             else if (secondNumber > firstNumber && secondNumber > thirdNumber)
             {
                 Console.WriteLine("The Second no. is the Largest ");
-                return secondNumber;
             }
             else
             {
                 Console.WriteLine("The Third no. is the Largest ");
-                return thirdNumber;
             }
         }
 
         //ArmStrongNumbers
 
-        public int ArmStrongNumbers()
+        public void ArmStrongNumbers()
         {
             Console.WriteLine("Enter the number in range of 100 to 1000 ");
             int number = Convert.ToInt32(Console.ReadLine());
@@ -169,7 +156,6 @@ namespace ConsoleApp1
             if (number < 100 || number >= 1000)
             {
                 Console.WriteLine("Please enter a value bw 100 and 1000");
-                return number;
             }
 
             string stringValue = number.ToString();
@@ -194,13 +180,12 @@ namespace ConsoleApp1
                 Console.WriteLine("The given number is not an Armstrong number.");
             }
 
-            return number;
 
         }
 
         //Sum of Multiples of 3and5 under 1000 using loop
 
-        public int SumOfMultiples()
+        public void SumOfMultiples()
         {
             int result = 0;
             for (int i = 0; i < 1000; i++)
@@ -213,13 +198,12 @@ namespace ConsoleApp1
 
             }
             Console.WriteLine(result);
-            return result;
         }
 
 
         //FizzBuzz
 
-        public int SumOfMultiples2()
+        public void SumOfMultiples2()
         {
             for (int i = 0; i < 100; i++) 
             {
@@ -241,13 +225,12 @@ namespace ConsoleApp1
                 }
                 
             }
-            return 0;
 
         }
 
 
         //Odd or even
-        public int OddEven()
+        public void OddEven()
         {
             for (int i = 0; i < 15; i++)
             {
@@ -260,11 +243,10 @@ namespace ConsoleApp1
                     Console.WriteLine(i + "is odd");
                 }
             }
-            return 0;
         }
 
         //Sort an array of string
-        public string ArrayOfStrings()
+        public void ArrayOfStrings()
         {
             string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
             Array.Sort(cars);
@@ -272,13 +254,12 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(cars[i]);
             }
-            return "0";
         }
 
 
         //SumOfAllElementsOfTwoArrays
 
-        public int SumOfTwoArrays()
+        public void SumOfTwoArrays()
         {
             int[] array1 = { 1, 2, 3, 4, 5, 6, 7, 8 };
             int[] array2 = { 100, 200, 300, 400, 500 };
@@ -288,7 +269,6 @@ namespace ConsoleApp1
 
             int totalSum = sumOfFirstArray + sumOfSecondArray;
             Console.WriteLine(totalSum);
-            return totalSum;
         }
 
         //Outputting Array in reverse order using for loop
@@ -313,6 +293,94 @@ namespace ConsoleApp1
 
         }
 
+        //Finding Factorial
+
+        public void FindingFactorial()
+        {
+            Console.WriteLine("Enter your number");
+            int result = 1;
+            int number = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= number ; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine(result);
+        }
+
+
+
+
+        //Using While Loop
+
+        //NoFrom1to10
+
+        public void NoBw1and10()
+        {
+            int i = 1;
+            while (i <= 10)
+            { 
+                Console.WriteLine(i);
+                i++;
+            }
+
+        }
+
+        //using do while
+        public void Bw1and10()
+        {
+            int i = 1;
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            while (i <= 10);
+        }
+
+        //printing even no. in a given array
+        public void EvenNoInArray()
+        {
+            int[] array = { 1, 2, 3, 4, 5, 6, 7, 82, 9, 10, 11, 12, 13, 14, 50, 55, 56 };
+            int i = 0;
+            while ( i < array.Length){
+                if (array[i] % 2 == 0) 
+                {
+                    Console.WriteLine(array[i]);
+                }
+                i++;
+            }
+        }
+
+
+        //Array Methods of Select and Where
+        //Make an array of numbers that are doubles of the first array
+
+        public void DoublesOfFirstArray()
+        {
+            int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
+            var doubledNumbers = array.Select(item => item*2);
+            Console.WriteLine(string.Join(", ", doubledNumbers));
+        }
+
+        //Take an array of numbers and make them strings
+
+        public void ConvertedToString()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5 };
+
+            var convertedToString = numbers.Select(item => item.ToString());
+            Console.WriteLine(convertedToString.GetType());
+            Console.WriteLine(string.Join(", ", convertedToString));
+        }
+
+        //Any array of numbers, return a new array that has only the numbers that are 5 or greater.
+
+        public void GreaterThan5()
+        {
+            int[] numbers = { 1, 7, 3, 33, 9, 11 };
+            var greaterThanFive = numbers.Where(item => item > 5).ToArray();
+            Console.WriteLine(string.Join(", " , greaterThanFive));
+        }
 
     }
 }

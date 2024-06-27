@@ -49,10 +49,29 @@
             //assignment1.SumOfTwoArrays();
 
             //ReversedArray
-            assignment1.ArrayInReverseOrder();
+            //assignment1.ArrayInReverseOrder();
+
+            //Finding Factorial
+            //assignment1.FindingFactorial();
+
+            //No. Bw 1 and 10 using while loop
+            //assignment1.NoBw1and10();
 
 
+            //same using do while loop
+            //assignment1.Bw1and10();
 
+            //Even no in an array
+            //assignment1.EvenNoInArray();
+
+            //Doubles of First Array
+            //assignment1.DoublesOfFirstArray();
+
+            //Converted To String
+            //assignment1.ConvertedToString();
+
+            //GreaterThanFive
+            assignment1.GreaterThan5();
 
 
         }
