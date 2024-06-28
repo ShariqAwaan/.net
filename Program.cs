@@ -17,6 +17,9 @@
             //ChangingFirstandLastPositions
             //assignment1.ChangingFirstAndLastPositions();
 
+            //AddingChar
+            assignment1.AddingChar();
+
             //SquareOfNumber
             //assignment1.SquareOfNumber();
 
@@ -71,7 +74,7 @@
             //assignment1.ConvertedToString();
 
             //GreaterThanFive
-            assignment1.GreaterThan5();
+            //assignment1.GreaterThan5();
 
 
         }

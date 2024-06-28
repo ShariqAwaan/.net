@@ -8,6 +8,9 @@ namespace ConsoleApp1
 {
     public class Assignment1
     {
+
+        //MultiplicationOfTwoNumbers
+
         public void MultiplicationOfTwoNumbers()
         {
 
@@ -23,6 +26,8 @@ namespace ConsoleApp1
 
 
         }
+
+        //AddingPY
 
         public void AddingPY()
         {
@@ -40,6 +45,8 @@ namespace ConsoleApp1
 
         }
 
+        //ChangingFirstAndLastPositions
+
         public void ChangingFirstAndLastPositions()
         {
             Console.WriteLine("Enter your Character ");
@@ -56,6 +63,27 @@ namespace ConsoleApp1
             Console.WriteLine("The new keyword is " + newWord);
         }
 
+        //Adding first 3 chars. on front and back
+
+        public void AddingChar()
+        {
+            Console.WriteLine("Enter your word ");
+            string keyword = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(keyword) || keyword.Length < 2)
+            {
+                Console.WriteLine("The input is too short or empty.");
+            }
+
+            string firstThree = keyword.Substring( 0 , 3);
+            //Console.WriteLine(firstThree);
+
+            string newWord = firstThree + keyword + firstThree;
+            Console.WriteLine( newWord );
+
+        }
+
+        //SquareOfNumber
         public void SquareOfNumber()
         {
             Console.WriteLine("Enter your no. ");
@@ -63,6 +91,8 @@ namespace ConsoleApp1
             int Square = Convert.ToInt32(Math.Pow(number, 2));
             Console.WriteLine(Square);
         }
+
+        //ChangingSpecificKeyword
 
         public void ChangingSpecificKeyword()
         {
@@ -90,6 +120,8 @@ namespace ConsoleApp1
 
         }
 
+
+        //MultipleOf3or7
         public void MultipleOf3or7()
         {
             Console.WriteLine("Enter your number :");
@@ -116,6 +148,8 @@ namespace ConsoleApp1
             }
 
         }
+
+        //FindingLargestValue
 
         public void FindingLargestValue()
         {
@@ -381,6 +415,8 @@ namespace ConsoleApp1
             var greaterThanFive = numbers.Where(item => item > 5).ToArray();
             Console.WriteLine(string.Join(", " , greaterThanFive));
         }
+
+
 
     }
 }
