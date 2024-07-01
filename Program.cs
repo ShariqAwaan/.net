@@ -18,7 +18,7 @@
             //assignment1.ChangingFirstAndLastPositions();
 
             //AddingChar
-            assignment1.AddingChar();
+            //assignment1.AddingChar();
 
             //SquareOfNumber
             //assignment1.SquareOfNumber();
@@ -75,6 +75,36 @@
 
             //GreaterThanFive
             //assignment1.GreaterThan5();
+
+            //Capitalized Name
+            //assignment1.CapitalizedNames();
+
+            //SquareOfNoInArray
+            //assignment1.SquareOfNumbersInArray();
+
+            //SumOfPositiveOnes
+            //assignment1.SumOfPositiveOnes();
+
+
+            //Mean and median
+            //assignment1.CalculateMeanAndMedian();
+
+            //AbreviatedName
+            //assignment1.AbbreviateName();
+
+            //AgeDifference
+            //assignment1.AgeDifference();
+
+            //NoGreaterThan5
+            //assignment1.NumbersGreaterThanOrEqualToFive();
+
+            //Even No.
+            //assignment1.EvenNumbers();
+
+            //LengthFiveOrLess
+            //assignment1.StringsWithLengthFiveOrLess();
+
+
 
 
         }

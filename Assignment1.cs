@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleApp1
 {
@@ -403,7 +404,7 @@ namespace ConsoleApp1
             int[] numbers = { 1, 2, 3, 4, 5 };
 
             var convertedToString = numbers.Select(item => item.ToString());
-            Console.WriteLine(convertedToString.GetType());
+            //Console.WriteLine(convertedToString.GetType());
             Console.WriteLine(string.Join(", ", convertedToString));
         }
 
@@ -416,6 +417,118 @@ namespace ConsoleApp1
             Console.WriteLine(string.Join(", " , greaterThanFive));
         }
 
+
+
+
+        //Capitalize each of an array of names
+
+        public void CapitalizedNames()
+        {
+            string[] q3Array = { "ali", "ahmed", "shahid", "atta" };
+
+            string[] capitalizedArray = q3Array.Select(item =>
+                char.ToUpper(item[0]) + item.Substring(1)
+            ).ToArray();
+
+            Console.WriteLine(string.Join(", ", capitalizedArray));
+        }
+
+        //Square the value of every element in the array
+
+        public void SquareOfNumbersInArray()
+        {
+            int[] q4Array = { 1, 3, 4, 5, 22, 9 };
+
+            int[] squaredArray = q4Array.Select(item => item * item).ToArray();
+
+            Console.WriteLine(string.Join(", ", squaredArray));
+        }
+
+        //If the given input is an array of numbers, return the sum of all the positives ones. If the array is empty or there aren't any positive numbers, return 0.
+        public void SumOfPositiveOnes()
+        {
+            int[] q5Array = { -1, 7, -4, -2, 4 };
+
+            int total = q5Array.Where(item => item > 0).Sum();
+
+            Console.WriteLine(total);
+        }
+
+        //Mean and Median
+
+        public void CalculateMeanAndMedian()
+        {
+            int[] array = { 1, 4, 2, 65, 76, 44, 11, 21, 97 };
+
+            // Mean
+            double mean = array.Average();
+            Console.WriteLine($"Mean: {mean}");
+
+            // Median
+            Array.Sort(array);
+            int length = array.Length;
+            double median;
+            if (length % 2 == 0)
+            {
+                median = (array[length / 2 - 1] + array[length / 2]) / 2.0;
+            }
+            else
+            {
+                median = array[length / 2];
+            }
+            Console.WriteLine($"Median: {median}");
+        }
+
+
+            //The given input is a string of multiple words with a single space between each of them. Abbreviate the name and return the name initials.
+
+            public void AbbreviateName()
+        {
+            string fullName = "Mudassir Abbas";
+            string[] nameParts = fullName.Split(' ');
+            string abbreviated = string.Join(". ", nameParts.Select(part => part[0])) + ".";
+            Console.WriteLine($"Abbreviated Name: {abbreviated}");
+        }
+
+        //Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
+
+        public void AgeDifference()
+        {
+            int[] ages = { 5, 10, 39, 37, 17 };
+            Array.Sort(ages);
+            int youngest = ages.First();
+            int oldest = ages.Last();
+            int difference = oldest - youngest;
+            Console.WriteLine($"The youngest is: {youngest}, The oldest is: {oldest}, The age difference is: {difference}");
+        }
+
+        //Any array of numbers, return a new array that has only the numbers that are 5 or greater.
+
+        public void NumbersGreaterThanOrEqualToFive()
+        {
+            int[] numbers = { 1, 7, 3, 33, 9, 11 };
+            var filteredNumbers = numbers.Where(num => num >= 5).ToArray();
+            Console.WriteLine($"Numbers >= 5: {string.Join(", ", filteredNumbers)}");
+        }
+
+        //Any array of numbers, return a new array that only includes the even numbers.
+
+        public void EvenNumbers()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var evenNumbers = numbers.Where(num => num % 2 == 0).ToArray();
+            Console.WriteLine($"Even Numbers: {string.Join(", ", evenNumbers)}");
+        }
+
+
+        //Any array of strings, return a new array that only includes those that are 5 characters or fewer in length
+
+        public void StringsWithLengthFiveOrLess()
+        {
+            string[] strings = { "Shahid", "John", "Atta", "Shahab", "Mudassir", "Wasey" };
+            var filteredStrings = strings.Where(str => str.Length <= 5).ToArray();
+            Console.WriteLine($"Strings With Length <= 5: {string.Join(", ", filteredStrings)}");
+        }
 
 
     }
